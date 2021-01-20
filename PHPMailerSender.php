@@ -39,7 +39,7 @@
  */
 public function sendMail($subject, $body, $destinys = 'email@domain.test', $destinysName = 'Name', $from = 'sender@domain.text', $fromName = 'Sender', $ishtml = true, $secureType = 'ssl', $port = '465', $debug = 0, $auth = true, $ccArray=null, $username = 'sender@domain.text', $password = 'senderpassword', $host = 'smtp.provider.com'){
 
-    $regexEmail = "/^(?:(?:[\"]\2[\".])?((?:[a-zA-Z0-9](?:\.[a-zA-Z0-9-_])?[a-zA-Z0-9-_]*)+)(?:[.\"](.+)[\".])?\1?(?:[.\"]\2[\"])?)@[a-zA-Z0-9][a-zA-Z0-9-]*\.(?:[a-zA-Z0-9]{2,}|[a-zA-Z0-9]{3,}\.?[a-zA-Z0-9]{2,})$/";
+    $regexEmail = "/^(?:(?:[\"]\2[\".])?((?:[a-zA-Z0-9](?:\.[a-zA-Z0-9-_])?[a-zA-Z0-9-_]*)+)(?:[.\"](.+)[\".])?\1?(?:[.\"]\2[\"])?)@[a-zA-Z0-9][a-zA-Z0-9-]*(\.(?:[a-zA-Z0-9]{2,}))*$/";
 
     $mail = new PHPMailer();
     $mail->IsSMTP();
